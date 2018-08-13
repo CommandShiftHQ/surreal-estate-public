@@ -1,0 +1,28 @@
+.NavBar {
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+}
+
+.NavBar > .logo {
+  display: inline-block;
+  padding: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.NavBar > .nav {
+  display: inline-block;
+  margin: 0;
+  padding: 0 0 0 2rem;
+}
+
+.NavBar > .nav > .item {
+  display: inline-block;
+  padding: 1rem;
+  margin: 0;
+  cursor: pointer;
+}
+
+.NavBar > .nav > .item:hover {
+  background-color: #eee;
+}

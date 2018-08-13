@@ -1,9 +1,10 @@
 import React, { Fragment } from 'react';
+import NavBar from './components/NavBar';
 import './App.css';
 
 const App = () => (
   <Fragment>
-    Surreal Estate
+    <NavBar />
   </Fragment>
 );
 
