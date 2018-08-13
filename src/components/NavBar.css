@@ -10,6 +10,11 @@
   cursor: pointer;
 }
 
+.NavBar > .logo > .fa-fort-awesome {
+  color: #774872;
+  margin-right: 0.5rem;
+}
+
 .NavBar > .nav {
   display: inline-block;
   margin: 0;
