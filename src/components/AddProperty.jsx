@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import './AddProperty.css';
 
 class AddProperty extends Component {
@@ -17,7 +18,9 @@ class AddProperty extends Component {
   handleAddProperty = event => {
     event.preventDefault();
 
-    console.log(this.state.fields);
+    axios.post('http://localhost:3000/v1/api/PropertyListing', this.state.fields)
+      .then(res => console.log(res))
+      .catch(err => console.error(err));
   };
 
   handleFieldChange = event => {
