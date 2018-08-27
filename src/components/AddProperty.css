@@ -1,0 +1,42 @@
+.AddProperty {
+  padding: 20px;
+}
+
+.AddProperty > form {
+  margin: 0 auto;
+  max-width: 600px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 15px;
+}
+
+.AddProperty > form > .form-group {
+  margin-bottom: 15px;
+}
+
+.AddProperty > form > .form-group > label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.AddProperty > form > .form-group > input,
+.AddProperty > form > .form-group > select {
+  border-radius: 0;
+  border: 1px solid #666;
+  background-color: white;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 5px;
+}
+
+.AddProperty > form > button {
+  border-radius: 0;
+  background-color: #774872;
+  font-family: inherit;
+  border: 0;
+  color: white;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 5px;
+}
