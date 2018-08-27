@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Alert from './Alert';
 import './AddProperty.css';
 
 class AddProperty extends Component {
@@ -13,18 +14,35 @@ class AddProperty extends Component {
       price: '',
       email: '',
     },
+    alertMessage: '',
+    isSuccess: false,
+    isError: false,
   };
 
   handleAddProperty = event => {
     event.preventDefault();
 
-    axios.post('http://localhost:3000/v1/api/PropertyListing', this.state.fields)
-      .then(res => console.log(res))
-      .catch(err => console.error(err));
+    this.setState({
+      isSuccess: false,
+      isError: false,
+      alertMessage: '',
+    });
+
+    axios.post('http://localhost:3000/api/v1/PropertyListing', this.state.fields)
+      .then(res => this.setState({
+        isSuccess: true,
+        alertMessage: 'Form submitted successfully',
+      }))
+      .catch(err => {
+        console.error(err);
+        this.setState({
+          isError: true,
+          alertMessage: 'Unable to add property',
+        });
+      });
   };
 
   handleFieldChange = event => {
-    console.log(event);
     this.setState({
       fields: {
         ...this.state.fields,
@@ -34,9 +52,13 @@ class AddProperty extends Component {
   };
 
   render() {
+    const { isSuccess, isError, alertMessage } = this.state;
+
     return (
       <div className="AddProperty">
         <form onSubmit={this.handleAddProperty}>
+          {isSuccess && <Alert message={alertMessage} success />}
+          {isError && <Alert message={alertMessage} />}
           <div className="form-group">
             <label htmlFor="title">Title</label>
             <input
