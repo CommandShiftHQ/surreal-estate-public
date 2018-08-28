@@ -1,0 +1,46 @@
+.Properties {
+    display: table;
+    width: 100%;
+}
+
+.Properties > .sidebar {
+    border-right: 1px solid #ccc;
+    background-color: white;
+    width: 200px;
+    display: table-cell;
+    vertical-align: top;
+    height: 100vh;
+}
+
+.Properties > .sidebar > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.Properties > .sidebar > ul > li > a,
+.Properties > .sidebar > ul > li > span {
+    padding: 10px;
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+
+.Properties > .sidebar > ul > li > a:hover {
+    background-color: #f5F5F5;
+    cursor: pointer;
+}
+
+.Properties > .main {
+    display: table-cell;
+    vertical-align: top;
+    padding: 5px;
+}
+
+.Properties > .main > .property {
+    padding: 5px;
+    display: inline-block;
+    width: 25%;
+    padding: 5px;
+    box-sizing: border-box;
+}

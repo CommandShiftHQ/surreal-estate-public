@@ -1,0 +1,26 @@
+.PropertyCard {
+  background-color: white;
+  padding: 10px;
+}
+
+.PropertyCard > .graphic {
+  padding: 40px;
+  text-align: center;
+  background-color: #eee;
+  color: #774872;
+  font-size: 4rem;
+}
+
+.PropertyCard > .detail {
+  padding: 10px;
+}
+
+.PropertyCard > .email {
+  text-decoration: none;
+  display: block;
+  background-color: #774872;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+}
