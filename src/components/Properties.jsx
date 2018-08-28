@@ -4,6 +4,7 @@ import axios from 'axios';
 import qs from 'qs';
 import PropertyCard from './PropertyCard';
 import './Properties.css';
+import './SearchForm.css';
 
 class Properties extends Component {
   state = {
@@ -57,10 +58,12 @@ class Properties extends Component {
         <div className="sidebar">
           <ul>
             <li>
-              <form onSubmit={this.handleSearch}>
-                <input type="text" onChange={e => this.setState({ search: e.target.value })} />
-                <button type="submit"><i className="fas fa-search" /></button>
-              </form>
+              <span>
+                <form className="SearchForm" onSubmit={this.handleSearch}>
+                  <input type="text" onChange={e => this.setState({ search: e.target.value })} />
+                  <button type="submit"><i className="fas fa-search" /></button>
+                </form>
+              </span>
             </li>
           </ul>
           <ul>

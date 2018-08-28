@@ -1,0 +1,22 @@
+.SearchForm {
+    display: flex;
+    flex-direction: row;
+}
+
+.SearchForm > input {
+    flex: 1;
+    display: flex;
+    padding: 5px;
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid #ccc;
+}
+
+.SearchForm > button {
+    display: flex;
+    background-color: #774872;
+    color: white;
+    border: 0;
+    padding: 5px 10px;
+    border-radius: 0;
+}
