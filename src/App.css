@@ -3,4 +3,5 @@ body {
   padding: 0;
   font-family: 'Nunito', sans-serif;
   background-color: #ddd;
+  -webkit-font-smoothing: antialiased;
 }
