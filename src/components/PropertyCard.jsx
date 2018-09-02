@@ -2,6 +2,7 @@ import React from 'react';
 import './PropertyCard.css';
 
 const PropertyCard = ({
+  _id,
   title,
   bedrooms,
   bathrooms,
@@ -9,6 +10,8 @@ const PropertyCard = ({
   email,
   type,
   city,
+  onSaveProperty,
+  userID,
 }) => (
   <div className="PropertyCard">
     <div className="graphic">
@@ -30,6 +33,15 @@ const PropertyCard = ({
       <i className="fas fa-pound-sign" /> {price}
     </div>
     <a href={`mailto:${email}`} className="email"><i className="fas fa-envelope" /> Email</a>
+    {userID && (
+      <a
+        href="#"
+        onClick={() => onSaveProperty(_id)}
+        className="save"
+      >
+        <i className="fas fa-star" /> Save
+      </a>
+    )}
   </div>
 );
 

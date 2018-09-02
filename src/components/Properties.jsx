@@ -52,7 +52,18 @@ class Properties extends Component {
     }));
   };
 
+  handleSaveProperty = propertyId => {
+    const { userID } = this.props;
+
+    axios.post('http://localhost:3000/api/v1/Favourite', {
+      propertyListing: propertyId,
+      fbUserId: userID,
+    });
+  };
+
   render() {
+    const { userID } = this.props;
+
     return (
       <div className="Properties">
         <div className="sidebar">
@@ -82,7 +93,7 @@ class Properties extends Component {
         <div className="main">
           {this.state.properties.map(property => (
             <div key={property._id} className="property">
-              <PropertyCard {...property} />
+              <PropertyCard {...property} userID={userID} onSaveProperty={this.handleSaveProperty} />
             </div>
           ))}
         </div>

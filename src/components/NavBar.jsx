@@ -10,9 +10,9 @@ const NavBar = ({
     <div className="logo"><i className="fab fa-fort-awesome" /> Surreal Estate</div>
     <ul className="nav">
       <li className="item" onClick={() => history.push('/')}>View Properties</li>
+      <li className="item" onClick={() => history.push('/saved-properties')}>Saved Properties</li>
       <li className="item" onClick={() => history.push('/add-property')}>Add a Property</li>
     </ul>
-    {console.log(userID)}
     <div className="fblogin">
       {userID ? <button onClick={() => window.FB.logout(onLogout)}>Sign Out</button> : (
         <FacebookLogin

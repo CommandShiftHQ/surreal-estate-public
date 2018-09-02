@@ -1,0 +1,10 @@
+.Favourite {
+  padding: 10px;
+  position: relative;
+}
+
+.Favourite > .remove {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}

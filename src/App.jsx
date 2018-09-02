@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Properties from './components/Properties';
 import AddProperty from './components/AddProperty';
+import Favourites from './components/Favourites';
 import './App.css';
 
 class App extends Component {
@@ -13,7 +14,6 @@ class App extends Component {
   };
 
   handleLogin = ({ userID }) => {
-    console.log(userID);
     this.setState({ userID });
   };
 
@@ -28,7 +28,16 @@ class App extends Component {
           onLogout={this.handleLogout}
         />
         <Switch>
-          <Route exact path="/" component={Properties} />
+          <Route
+            exact
+            path="/"
+            render={props => <Properties {...props} userID={this.state.userID} />}
+          />
+          <Route
+            exact
+            path="/saved-properties"
+            render={props => <Favourites {...props} userID={this.state.userID} />}
+          />
           <Route exact path="/add-property" component={AddProperty} />
         </Switch>
       </Fragment>

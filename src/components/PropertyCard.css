@@ -24,3 +24,14 @@
   padding: 10px;
   text-align: center;
 }
+
+.PropertyCard > .save {
+  text-decoration: none;
+  display: block;
+  border: 1px solid #774872;
+  color: #774872;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  margin-top: 5px;
+}
