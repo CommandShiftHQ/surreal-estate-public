@@ -1,9 +1,9 @@
 import React from 'react';
-import Favourite from './Favourite.css';
+import './Favourite.css';
 
-const Favourite = ({ _id, title, onRemoveFavourite }) => (
+const Favourite = ({ _id, propertyListing, onRemoveFavourite }) => (
   <div className="Favourite">
-    <strong>{title}</strong>
+    <strong>{propertyListing.title}</strong>
     <a
       href="#"
       onClick={() => onRemoveFavourite(_id)}
